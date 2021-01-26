@@ -39,6 +39,7 @@ export default {
         task: 'START',
         time: startTime.toLocaleTimeString(),
         actual_time: actualTime.toLocaleTimeString(),
+        current_color: this.wallColor,
       })
     }, 30000)
     // stop servers
@@ -47,6 +48,7 @@ export default {
         task: 'STOP',
         time: startTime.toLocaleTimeString(),
         actual_time: actualTime.toLocaleTimeString(),
+        current_color: this.faceColor,
       })
     }, 40000)
     // make Report
@@ -55,6 +57,7 @@ export default {
         task: 'REPORT',
         time: startTime.toLocaleTimeString(),
         actual_time: actualTime.toLocaleTimeString(),
+        current_color: this.handColor,
       })
     }, 50000)
   },
