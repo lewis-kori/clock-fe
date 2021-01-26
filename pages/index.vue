@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row mb-3">
+    <div class="row mb-3" :style="{ 'background-color': wallColor }">
       <div class="col-md-12">
         <Clock />
       </div>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Clock from '~/components/clock/Clock.vue'
 import Report from '~/components/Report/Report.vue'
 import ShowReportButton from '~/components/Report/ShowReportButton.vue'
@@ -32,6 +33,9 @@ export default {
     return {
       displayReportTable: false,
     }
+  },
+  computed: {
+    ...mapGetters(['wallColor']),
   },
   methods: {
     showReportTable() {

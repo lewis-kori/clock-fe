@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ 'background-color': wallColor }">
+  <div>
     <h1>Lewis Kori</h1>
 
     <div id="clock" ref="clock">
@@ -48,7 +48,7 @@ export default {
         time: startTime.toLocaleTimeString(),
         actual_time: actualTime.toLocaleTimeString(),
       })
-    }, 30000)
+    }, 40000)
     // make Report
     setInterval(() => {
       this.createTask({
@@ -56,7 +56,7 @@ export default {
         time: startTime.toLocaleTimeString(),
         actual_time: actualTime.toLocaleTimeString(),
       })
-    }, 30000)
+    }, 50000)
   },
   methods: {
     ...mapActions(['createTask', 'deleteTasks']),
