@@ -1,3 +1,4 @@
+require('dotenv').config()
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -29,6 +30,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,7 +42,7 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: { baseURL: process.env.baseURL || 'http://localhost:8000/api/' },
+  axios: { baseURL: process.env.baseUrl || 'http://localhost:8000/api/' },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

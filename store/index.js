@@ -8,15 +8,6 @@ export const state = () => ({
 export const mutations = {
   updateTasks(state, payload) {
     state.tasks = payload
-    // payload.reduce(function (acc, obj) {
-    //   const key = obj.time
-    //   if (!acc[key]) {
-    //     acc[key] = []
-    //   }
-    //   acc[key].push(obj)
-    //   state.tasks.push(acc)
-    //   return acc
-    // }, {})
   },
   updateWallcolor(state, payload) {
     state.wallColor = payload
